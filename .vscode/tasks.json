@@ -1,0 +1,81 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Setup Template",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "setup"],
+      "group": "build",
+      "problemMatcher": [],
+      "isBackground": false
+    },
+    {
+      "label": "Start Development",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "group": "build",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "Build Production",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build"],
+      "group": "build",
+      "problemMatcher": [],
+      "isBackground": false
+    },
+    {
+      "label": "Package App",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "package"],
+      "group": "build",
+      "problemMatcher": [],
+      "isBackground": false,
+      "dependsOn": "Build Production"
+    },
+    {
+      "label": "Package All Platforms",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "package:all"],
+      "group": "build",
+      "problemMatcher": [],
+      "isBackground": false,
+      "dependsOn": "Build Production"
+    },
+    {
+      "label": "Clean Build",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "clean"],
+      "group": "build",
+      "problemMatcher": [],
+      "isBackground": false
+    },
+    {
+      "label": "Lint React Code",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "lint"],
+      "group": "test",
+      "problemMatcher": ["$eslint-stylish"],
+      "isBackground": false,
+      "options": {
+        "cwd": "${workspaceFolder}/renderer"
+      }
+    }
+  ]
+}

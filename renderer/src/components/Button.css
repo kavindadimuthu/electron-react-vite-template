@@ -1,0 +1,86 @@
+/* Button Component Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  outline: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #646cff;
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.btn--small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.btn--medium {
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.btn--large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+/* Variants */
+.btn--primary {
+  background-color: #646cff;
+  color: white;
+}
+
+.btn--primary:hover:not(:disabled) {
+  background-color: #535bf2;
+}
+
+.btn--primary:active:not(:disabled) {
+  background-color: #4c50e6;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: #646cff;
+  border: 1px solid #646cff;
+}
+
+.btn--secondary:hover:not(:disabled) {
+  background-color: #646cff;
+  color: white;
+}
+
+.btn--secondary:active:not(:disabled) {
+  background-color: #535bf2;
+}
+
+.btn--danger {
+  background-color: #dc2626;
+  color: white;
+}
+
+.btn--danger:hover:not(:disabled) {
+  background-color: #b91c1c;
+}
+
+.btn--danger:active:not(:disabled) {
+  background-color: #991b1b;
+}

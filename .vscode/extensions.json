@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "ms-vscode.vscode-typescript-next",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-json",
+    "ms-vscode.vscode-markdown",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.vscode-npm-script",
+    "pkief.material-icon-theme",
+    "ms-vscode.vscode-application-insights"
+  ]
+}

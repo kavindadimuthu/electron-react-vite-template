@@ -1,0 +1,44 @@
+{
+  "folders": [
+    {
+      "name": "Root",
+      "path": "."
+    },
+    {
+      "name": "Renderer (React)",
+      "path": "./renderer"
+    },
+    {
+      "name": "Electron",
+      "path": "./electron"
+    }
+  ],
+  "settings": {
+    "typescript.preferences.includePackageJsonAutoImports": "auto",
+    "eslint.workingDirectories": ["renderer"],
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "files.exclude": {
+      "**/node_modules": false,
+      "**/dist": false,
+      "**/dist-frontend": false,
+      "**/.git": false
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/dist-frontend": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.vscode-typescript-next",
+      "dbaeumer.vscode-eslint",
+      "bradlc.vscode-tailwindcss",
+      "ms-vscode.vscode-json",
+      "ms-vscode.vscode-markdown"
+    ]
+  }
+}

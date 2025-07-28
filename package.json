@@ -1,0 +1,40 @@
+{
+  "name": "electron-react-vite-template",
+  "version": "1.0.0",
+  "description": "A modern Electron app template with React, Vite, and TypeScript",
+  "main": "electron/main.js",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "keywords": [
+    "electron",
+    "react",
+    "vite",
+    "typescript",
+    "template",
+    "starter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/electron-react-vite-template.git"
+  },
+  "scripts": {
+    "postinstall": "cd renderer && npm install",
+    "dev": "concurrently \"cd renderer && npm run dev\" \"wait-on http://localhost:5173 && cross-env NODE_ENV=development electron .\"",
+    "build": "cd renderer && npm run build",
+    "package": "npm run build && cross-env NODE_ENV=production electron-packager . MyApp --platform=win32 --arch=x64 --out=dist --overwrite --ignore=node_modules --ignore=renderer --ignore=dist --prune=true --extra-resource=dist-frontend",
+    "package:all": "npm run build && npm run package:win && npm run package:mac && npm run package:linux",
+    "package:win": "cross-env NODE_ENV=production electron-packager . MyApp --platform=win32 --arch=x64 --out=dist --overwrite --ignore=node_modules --ignore=renderer --ignore=dist --prune=true --extra-resource=dist-frontend",
+    "package:mac": "cross-env NODE_ENV=production electron-packager . MyApp --platform=darwin --arch=x64 --out=dist --overwrite --ignore=node_modules --ignore=renderer --ignore=dist --prune=true --extra-resource=dist-frontend",
+    "package:linux": "cross-env NODE_ENV=production electron-packager . MyApp --platform=linux --arch=x64 --out=dist --overwrite --ignore=node_modules --ignore=renderer --ignore=dist --prune=true --extra-resource=dist-frontend",
+    "clean": "rimraf dist dist-frontend renderer/dist",
+    "setup": "npm install && cd renderer && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^29.4.6",
+    "electron-packager": "^17.1.2",
+    "wait-on": "^7.2.0",
+    "cross-env": "^7.0.3",
+    "rimraf": "^6.0.1"
+  }
+}
