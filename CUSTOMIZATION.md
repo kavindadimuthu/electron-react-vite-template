@@ -12,8 +12,8 @@ If this template is on GitHub, click "Use this template" and clone your new repo
 
 ```bash
 # Clone or copy the template
-git clone <your-template-repo> my-new-app
-cd my-new-app
+git clone https://github.com/kavindadimuthu/electron-react-vite-template.git my-new-app
+cd electron-react-vite-template
 
 # Run the setup script (optional)
 node setup-template.js

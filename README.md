@@ -49,14 +49,14 @@ electron-react-vite-template/
 1. **Click "Use this template"** button on GitHub
 2. **Clone your new repository:**
    ```bash
-   git clone https://github.com/yourusername/your-app-name.git
-   cd your-app-name
+   git clone https://github.com/kavindadimuthu/electron-react-vite-template.git
+   cd electron-react-vite-template
    ```
 
 ### Option 2: Clone Directly
 
 ```bash
-git clone https://github.com/yourusername/electron-react-vite-template.git my-app
+git clone https://github.com/kavindadimuthu/electron-react-vite-template.git my-app
 cd my-app
 ```
 
